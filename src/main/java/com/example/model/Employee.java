@@ -1,12 +1,8 @@
 package com.example.model;
 
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Data
 @Entity
@@ -14,7 +10,7 @@ import javax.persistence.Table;
 public class Employee {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
